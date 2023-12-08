@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #333;
+}
+html {
+  font-size: 62.5%;
+}
+.main-section {
+  margin: 2.4rem auto 0 auto;
+  width: 105rem;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+/* ### SLIDEER ### */
+/* .sidebar {
+  padding: 0rem 2.4rem;
+} */
+/* SIDEBAR-HEADER */
+.sidebar--header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.2rem;
+  padding: 1.2rem;
+  /* border-top-right-radius: 0.8rem; */
+  border-top-left-radius: 0.8rem;
+  background-color: #cce3a3;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.sidebar--header .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem;
+}
+.sidebar--header .sidebar--icon {
+  display: block;
+  padding: 0.8rem;
+  border-radius: 50%;
+  color: #4c3100;
+  background-color: #ffe4b3;
+  fill: #4c3100;
+  width: 4rem;
+}
+.btn-sort {
+  cursor: pointer;
+}
+.icon-deta {
+  display: block;
+  font-size: 1.8rem;
+}
+.sidebar--header .button {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.4rem;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #ffa500;
+}
+/*  SIDEBAR-BODY/CARD */
+.sidebar--body {
+  background-color: #46494c;
+  padding: 2.4rem;
+  height: 49rem;
+  overflow-y: scroll;
+}
+.sidebar--body::-webkit-scrollbar {
+  width: 0;
+}
+.card {
+  background-color: #80b918;
+  border-radius: 0.4rem;
+  margin-bottom: 2.4rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.card__header {
+  padding: 1.2rem 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+.card__date,
+.card__btn,
+.delete--btn {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+}
+
+.card__date {
+  background-color: #cc8400;
+  color: #fff;
+}
+.card__btn,
+.delete--btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #805300;
+  color: #fff;
+  cursor: pointer;
+}
+.card__header .sidebar--icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: #fff;
+  transition: all 0.3s;
+}
+.delete--btn {
+  background-color: #f8d5cc;
+}
+.delete--btn .sidebar--icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: #b02602;
+  color: #fff;
+}
+.upCaret {
+  display: none;
+}
+.card__log--visible .downCaret {
+  display: none;
+}
+.card__log--visible .upCaret {
+  display: block;
+}
+.icon-tag {
+  width: 4rem;
+  height: 4rem;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  background-color: #ffe4b3;
+  font-weight: 600;
+}
+.card__tag--red {
+  color: #d45962;
+  fill: #d45962;
+}
+.card__tag--green {
+  fill: #329e00;
+  color: #329e00;
+}
+/* CARD BODY */
+.card__body {
+  padding: 1.2rem 2.4rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  gap: 6.4rem;
+}
+.card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.card__item--title {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+.card__item--value {
+  font-size: 2rem;
+  font-weight: 500;
+}
+/* CRAD LOG */
+.card__log {
+  /* background-color: #ffe4b3; */
+  background-color: #c0dc8c;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  column-gap: 2.4rem;
+  row-gap: 1rem;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  transition: all 0.3s;
+  /* to make invisible */
+  /* display: none; */
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.card__log--visible .card__log {
+  padding: 2.4rem;
+  height: auto;
+  display: grid;
+  opacity: 1;
+  visibility: visible;
+}
+.card__log--title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.log__item--name,
+.log__item--price {
+  font-size: 2rem;
+}
+/* SIDEBAR-FOOTER */
+.sidebar--footer {
+  background-color: #46494c;
+  padding: 1.2rem 2.4rem;
+  border-bottom-left-radius: 0.8rem;
+  /* border-bottom-right-radius: 0.8rem; */
+}
+.sidebar--footer p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #c2bfbf;
+}
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #ffa500;
+}
+/* ### FORM ### */
+.form__container {
+  padding: 1.2rem 2.4rem;
+  background-color: #e6f1d1;
+  border-bottom-right-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+.form__container--header {
+  padding: 1.2rem 2rem;
+  background-color: #ffedcc;
+  border-radius: 0.4rem;
+  margin-bottom: 2.4rem;
+}
+.form__container--header p {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #664200;
+}
+.form__container--body {
+  height: 47rem;
+  overflow-y: scroll;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__container--body .form--visible {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+.form label {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+.form input {
+  font-family: inherit;
+  font-size: 1.8rem;
+  padding: 0.4rem;
+  background-color: #9cd880;
+  border: none;
+  border-radius: 0.4rem;
+}
+.sidebar--body::-webkit-scrollbar {
+  width: 0;
+}
+.btn-submit {
+  opacity: 0;
+}
+.form__container--footer {
+  margin-top: 1.2rem;
+  content: "";
+  padding: 1.2rem;
+}
+/* MESSAGE-WINDOW */
+.messageWindow {
+  position: absolute;
+  top: 0rem;
+  left: 20%;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+.message--text {
+  font-size: 2rem;
+  color: #fff;
+}
+.window-active {
+  z-index: 9999999;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0%) !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.window-alert {
+  background-color: #ff0000;
+}
+.window-success {
+  background-color: #5ab300;
+}
+.window-warn {
+  background-color: #ff7900;
+}

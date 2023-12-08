@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/fav-icon.png" />
+    <link rel="apple-touch-icon" href="img/apple180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cash Care</title>
+    <link rel="stylesheet" href="style/genrale.css" />
+    <link rel="stylesheet" href="style/media.css" />
+    <script type="module" src="js/controller.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <section class="main-section">
+        <div class="sidebar">
+          <div class="sidebar--header">
+            <div class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                class="sidebar--icon btn-sort"
+              >
+                <path
+                  d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+                ></path>
+              </svg>
+              <span class="icon-deta">Short</span>
+            </div>
+            <div class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                class="sidebar--icon"
+              >
+                <path
+                  d="M224,216a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,216Zm-88-40V80a16,16,0,0,1,16-16h40a16,16,0,0,1,16,16v96a16,16,0,0,1-16,16H152A16,16,0,0,1,136,176Zm16,0h40V80H152ZM48,176V40A16,16,0,0,1,64,24h40a16,16,0,0,1,16,16V176a16,16,0,0,1-16,16H64A16,16,0,0,1,48,176Zm16,0h40V40H64Z"
+                ></path>
+              </svg>
+              <span class="icon-deta avarage-data"> 000.00</span>
+            </div>
+            <div class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="sidebar--icon"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M216,72H56a8,8,0,0,1,0-16H192a8,8,0,0,0,0-16H56A24,24,0,0,0,32,64V192a24,24,0,0,0,24,24H216a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72Zm0,128H56a8,8,0,0,1-8-8V86.63A23.84,23.84,0,0,0,56,88H216Zm-48-60a12,12,0,1,1,12,12A12,12,0,0,1,168,140Z"
+                ></path>
+              </svg>
+              <span class="icon-deta total-data">0000.00</span>
+            </div>
+            <button class="button">Add Exp</button>
+          </div>
+          <div class="sidebar--body">
+            <!-- CARD:1 -->
+            <!-- <div class="card card__log--visible">
+              <div class="card__header">
+                <div class="card__date">09/11/26</div>
+                <div class="card__btn">
+                  <span class="card__btn-text">SeeLog</span
+                  ><ion-icon
+                    name="chevron-down-outline"
+                    class="sidebar--icon"
+                  ></ion-icon>
+                </div>
+                <div class="card__tag--red">
+                  <ion-icon
+                    name="trending-up-outline"
+                    class="icon-tag"
+                  ></ion-icon>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="card__item">
+                  <p class="card__item--title">Total item</p>
+                  <p class="card__item--value">12</p>
+                </div>
+                <div class="card__item">
+                  <p class="card__item--title">Total expences</p>
+                  <p class="card__item--value">869.00</p>
+                </div>
+                <div class="card__item">
+                  <p class="card__item--title">Max expenses</p>
+                  <p class="card__item--value">167.00</p>
+                </div>
+              </div>
+              <div class="card__log">
+                <p class="card__log--title">Item name</p>
+                <p class="card__log--title">Item price</p>
+                <p class="log__item--name">pizza</p>
+                <p class="log__item--price">120.00</p>
+                <p class="log__item--name">maxican chiken</p>
+                <p class="log__item--price">760.00</p>
+              </div>
+            </div> -->
+          </div>
+          <div class="sidebar--footer">
+            <p>
+              <a
+                href="https://ayanwebdev.netlify.app/"
+                class="footer-link"
+                target="_blank"
+                >&copy;Ayan Ghanta</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="form__container">
+          <div class="form__container--header">
+            <p>Cash Care: Your Daily Finance Companion</p>
+          </div>
+          <div class="form__container--body">
+            <form autocomplete="off" action="#" class="form">
+              <!-- Row:1 -->
+              <div class="form-row">
+                <div class="form_inputHolder">
+                  <label for="itemName1">Item:</label>
+                  <input type="text" class="item__input" id="itemName1" />
+                </div>
+                <div class="form_inputHolder">
+                  <label for="itemPrice1">Item price:</label>
+                  <input type="text" id="itemPrice1" class="itemPrice__input" />
+                </div>
+              </div>
+              <!-- Row:2 -->
+              <div class="form-row">
+                <div class="form_inputHolder">
+                  <label for="itemName2">Item:</label>
+                  <input type="text" class="item__input" id="itemName2" />
+                </div>
+                <div class="form_inputHolder">
+                  <label for="itemPrice2">Item price:</label>
+                  <input type="text" id="itemPrice2" class="itemPrice__input" />
+                </div>
+              </div>
+              <!-- Row:3 -->
+              <div class="form-row">
+                <div class="form_inputHolder">
+                  <label for="itemName3">Item:</label>
+                  <input type="text" class="item__input" id="itemName3" />
+                </div>
+                <div class="form_inputHolder">
+                  <label for="itemPrice3">Item price:</label>
+                  <input type="text" id="itemPrice3" class="itemPrice__input" />
+                </div>
+              </div>
+              <!-- Row:4 -->
+              <div class="form-row">
+                <div class="form_inputHolder">
+                  <label for="itemName4">Item:</label>
+                  <input type="text" class="item__input" id="itemName4" />
+                </div>
+                <div class="form_inputHolder">
+                  <label for="itemPrice4">Item price:</label>
+                  <input type="text" id="itemPrice4" class="itemPrice__input" />
+                </div>
+              </div>
+              <!-- Row:5 -->
+              <div class="form-row">
+                <div class="form_inputHolder">
+                  <label for="itemName5">Item:</label>
+                  <input type="text" class="item__input" id="itemName5" />
+                </div>
+                <div class="form_inputHolder">
+                  <label for="itemPrice5">Item price:</label>
+                  <input type="text" id="itemPrice5" class="itemPrice__input" />
+                </div>
+              </div>
+              <!-- Row:6 -->
+              <div class="form-row">
+                <div class="form_inputHolder">
+                  <label for="itemName6">Item:</label>
+                  <input type="text" class="item__input" id="itemName6" />
+                </div>
+                <div class="form_inputHolder">
+                  <label for="itemPrice6">Item price:</label>
+                  <input type="text" id="itemPrice6" class="itemPrice__input" />
+                </div>
+              </div>
+              <!-- Row:7 -->
+              <div class="form-row">
+                <div class="form_inputHolder">
+                  <label for="itemName7">Item:</label>
+                  <input type="text" class="item__input" id="itemName7" />
+                </div>
+                <div class="form_inputHolder">
+                  <label for="itemPrice7">Item price:</label>
+                  <input type="text" id="itemPrice7" class="itemPrice__input" />
+                </div>
+              </div>
+              <!-- Row:8 -->
+              <div class="form-row">
+                <div class="form_inputHolder">
+                  <label for="itemName8">Item:</label>
+                  <input type="text" class="item__input" id="itemName8" />
+                </div>
+                <div class="form_inputHolder">
+                  <label for="itemPrice8">Item price:</label>
+                  <input type="text" id="itemPrice8" class="itemPrice__input" />
+                </div>
+              </div>
+              <div class="btn-submit--container">
+                <button type="submit" class="btn-submit">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="form__container--footer"></div>
+        </div>
+      </section>
+    </main>
+    <div class="messageWindow">
+      <p class="message--text">Have a good day.</p>
+    </div>
+  </body>
+</html>

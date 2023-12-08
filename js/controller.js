@@ -52,14 +52,10 @@ const cardDelete = function (selectedID) {
   model.storeData(model.state.dailyCardData);
 };
 
-const welcomeMsg = function () {
-  console.log("welcome to cashcare");
-};
 const init = function () {
   FormView.addEventHandlerAddExpense(controllFromView);
   FormDataView.addEventHandlerFormSubmit(controllFromData);
   CardView.addHandelBtnClick(cardDelete);
-  welcomeMsg();
   // get the data form local storage
   if (!localStorage.getItem("cashCareData"))
     return MassageView.showMassage(

@@ -8,6 +8,8 @@ export const state = {
   },
   entries: [],
   dailyCardData: [],
+  shortedCardData: [],
+  isSorted: false,
 };
 // helpers
 const calcTotalExp = function (data) {
@@ -100,6 +102,13 @@ export const formatData = function (newData) {
   });
 };
 
+export const sortCrads = function () {
+  const cardDataCoopy = [...state.dailyCardData];
+  cardDataCoopy.sort(
+    (card, nextCard) => card.totalExpense - nextCard.totalExpense
+  );
+  state.shortedCardData = cardDataCoopy;
+};
 export const calcGrothGraph = function (data) {
   data.forEach((card) => {
     card.trend = calcTrend(calcTotalExp(card.itemsList), state.dailyCardData);

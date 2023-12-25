@@ -3,6 +3,7 @@ import FormDataView from "./views/formDataView.js";
 import CardView from "./views/cardView.js";
 import HeaderView from "./views/headerView.js";
 import MassageView from "./views/massageView.js";
+import sortView from "./views/sortView.js";
 
 import * as model from "./model.js";
 
@@ -51,11 +52,20 @@ const cardDelete = function (selectedID) {
   MassageView.showMassage("Your log is Deleted.", "warn");
   model.storeData(model.state.dailyCardData);
 };
-
+const controllSort = function () {
+  model.state.isSorted = !model.state.isSorted;
+  if (model.state.isSorted) {
+    // short cards
+    model.sortCrads();
+    //upadte ui
+    CardView.renderCards(model.state.shortedCardData);
+  } else CardView.renderCards(model.state.dailyCardData);
+};
 const init = function () {
   FormView.addEventHandlerAddExpense(controllFromView);
   FormDataView.addEventHandlerFormSubmit(controllFromData);
   CardView.addHandelBtnClick(cardDelete);
+  sortView.addHandelBtnClick(controllSort);
   // get the data form local storage
   if (!localStorage.getItem("cashCareData"))
     return MassageView.showMassage(

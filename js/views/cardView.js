@@ -47,12 +47,12 @@ class CardView {
             <p class="card__item--value">${log.totalItem}</p>
         </div>
         <div class="card__item">
-            <p class="card__item--title">Total expences</p>
-            <p class="card__item--value">${formatMoney(log.totalExpense)}</p>
-        </div>
-        <div class="card__item">
             <p class="card__item--title">Max expenses</p>
             <p class="card__item--value">${formatMoney(log.maxExpense)}</p>
+        </div>
+        <div class="card__item">
+            <p class="card__item--title">Total expences</p>
+            <p class="card__item--value">${formatMoney(log.totalExpense)}</p>
         </div>
         </div>
         <div class="card__log">
